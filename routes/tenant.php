@@ -23,10 +23,6 @@ use Stancl\Tenancy\Middleware\PreventAccessFromCentralDomains;
 |
 */
 
-Route::get('/impersonate/{token}', function ($token) {
-    // dd($token);
-    dd(UserImpersonation::makeResponse($token));
-});
 
 Route::middleware([
     'web',
@@ -92,6 +88,10 @@ Route::middleware([
             $project->delete();
             return response()->noContent();
         })->name('projects.destroy');
+    });
+
+    Route::get('/impersonate/{token}', function ($token) {
+        return UserImpersonation::makeResponse($token);
     });
 
 

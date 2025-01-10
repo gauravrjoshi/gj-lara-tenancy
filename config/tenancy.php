@@ -18,9 +18,9 @@ return [
      * Only relevant if you're using the domain or subdomain identification middleware.
      */
     'central_domains' => [
+        'laravel-multi-tenant.test',
         '127.0.0.1',
         'localhost',
-        'laravel-multi-tenant.test',
         /*  'gauravj.localhost',
         'amit.localhost',
         'karuna.localhost', */
